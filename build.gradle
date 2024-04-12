@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.2.4'
+    id "com.github.jruby-gradle.base" version "2.1.0-alpha.2"
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -8,6 +9,7 @@ apply plugin: 'io.spring.dependency-management'
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
+final String JRUBY_VERSION = '9.4.6.0'
 
 repositories {
     mavenCentral()
@@ -15,4 +17,8 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'no.datek:slim-spring-webmvc:0.+'
+    implementation "org.jruby:jruby:$JRUBY_VERSION"
 }
+
+//jruby { jrubyVersion JRUBY_VERSION }
