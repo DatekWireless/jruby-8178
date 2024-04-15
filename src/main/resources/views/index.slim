@@ -1,3 +1,10 @@
 h1 Hello World!
 
 p This is a SLIM view template.
+
+a href="https://slim-template.github.io/" https://slim-template.github.io/
+
+table
+  tbody
+    - (id || 10).times do |i|
+      == render 'table_row', i:
